@@ -84,3 +84,34 @@ body{
 .history-list{margin-top:10px;color:var(--muted);font-size:13px;white-space:pre-line}
 
 .footer{margin-top:18px;color:var(--muted);text-align:center}
+
+.hero{
+  margin:0 auto 14px;
+  max-width:680px;
+}
+.hero-frame{
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+.hero-frame img{
+  width:100%;
+  display:block;
+}
+.hero-dots{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:10px;
+}
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  border:1px solid #aaa;
+  background:transparent;
+  cursor:pointer;
+}
+.dot.is-active{
+  background:#fff;
+}

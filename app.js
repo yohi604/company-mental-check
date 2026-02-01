@@ -493,3 +493,40 @@ btnClear.addEventListener("click", () => {
 
 // 처음 화면에서 기록 미리 표시(선택)
 renderHistory(loadLogs());
+
+// ----- Hero image carousel -----
+const HERO_IMAGES = [
+  "assets/hero-1.png",
+  "assets/hero-2.png",
+  "assets/hero-3.png"
+];
+
+const heroImg = document.getElementById("hero-img");
+const heroDots = document.querySelectorAll(".hero .dot");
+
+let heroIdx = 0;
+let heroTimer = null;
+
+function setHero(idx){
+  heroIdx = idx % HERO_IMAGES.length;
+  heroImg.src = HERO_IMAGES[heroIdx];
+
+  heroDots.forEach((d, i) => {
+    d.classList.toggle("is-active", i === heroIdx);
+  });
+}
+
+function startHero(){
+  heroTimer = setInterval(() => {
+    setHero(heroIdx + 1);
+  }, 2500);
+}
+
+heroDots.forEach(btn => {
+  btn.addEventListener("click", () => {
+    setHero(Number(btn.dataset.idx));
+  });
+});
+
+setHero(0);
+startHero();
