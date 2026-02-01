@@ -21,6 +21,7 @@ body{
 .header{margin-bottom:16px}
 .header h1{margin:0 0 6px;font-size:26px}
 .sub{margin:0;color:var(--muted);line-height:1.4}
+.lead{margin:10px 0 14px;color:var(--text);line-height:1.6}
 
 .card{
   background: rgba(17,24,39,0.86);
